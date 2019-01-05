@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <title>Take a Survey!</title>
+</head>
+
+<body class="container">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">Your Best Match!!!</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h1 id="best-match-name"></h1>
+                    <img id="best-match-image" width="500px" height="350px" />
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Survey Questions!</h1>
+    <h3>About You!</h3>
+    <h4>Name (required)</h4>
+    <input name="name" class="form-control" required />
+
+    <h4>Link to photo image (required)</h4>
+    <input name="photo" class="form-control" required />
+
+    <form id="survey-form">
+        <h5>Question 1</h5>
+        <p>You have a creative mind</p>
+        <select name="question1" required>
+            <option disabled selected value="">Seclect an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Most)</option>
+        </select>
+
+        <h5>Question 2</h5>
+        <p>You rarely get mad</p>
+        <select name="question2" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least) </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 3</h5>
+        <p>You like watching a lot of movies!</p>
+        <select name="question3" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least) </option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 4</h5>
+        <p>You like to party</p>
+        <select name="question4" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 5</h5>
+        <p>You drink occcasionaly</p>
+        <select name="question5" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 6</h5>
+        <p>You play sports more often</p>
+        <select name="question6" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 7</h5>
+        <p>You always go to the gym</p>
+        <select name="question7" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 8</h5>
+        <p>You play a lot of video games</p>
+        <select name="question8" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 9</h5>
+        <p>You always like hanging out with anyone</p>
+        <select name="question9" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <h5>Question 10</h5>
+        <p>You like to eat out at restauraunts</p>
+        <select name="question10" required>
+            <option disabled selected value="">Select an Option</option>
+            <option value="1">1 (Least)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <br /> <br />
+        <button data-toggle="modal" data-target="#exampleModal" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('#survey-form').addEventListener('submit', e => {
+            e.preventDefault();
+            //console.log('seeeeeeee', typeof $('#survey-form').serializeArray(), $('#survey-form').serializeArray());
+            fetch("/api/friends", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    questions: $('#survey-form').serializeArray()
+                })
+            }).then(res => res.json())
+                .then(res => {
+                    console.log('wwwwwww', res);
+                    document.querySelector('#best-match-name').innerHTML = res.name;
+                    document.querySelector('#best-match-image').src = res.photo;
+                })
+                .catch(err => console.log('errrrrrr', err));
+        });
+    </script>
+</body>
+
+</html>
